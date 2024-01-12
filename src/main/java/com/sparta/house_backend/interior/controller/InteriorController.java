@@ -47,6 +47,10 @@ public class InteriorController {
         return ResponseEntity.ok(responseList);
     }
 
-
+    // 5.선택한 인테리어 삭제
+    @DeleteMapping("/interior/{interiorId}")
+    public void deleteInterior(@PathVariable Long interiorId) {
+        interiorService.deleteInterior(interiorId);
+    }
 
 }

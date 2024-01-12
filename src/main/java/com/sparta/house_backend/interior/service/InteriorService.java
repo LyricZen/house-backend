@@ -51,4 +51,13 @@ public class InteriorService {
 
         return interiorResponseList;
     }
+
+    // 5. 선택한 인테리어 삭제
+    public void deleteInterior(Long interiorId) {
+        Interior interior = interiorRepository.findById(interiorId)
+                .orElseThrow(IllegalArgumentException::new);
+        interiorRepository.delete(interior);
+    }
+
+
 }
