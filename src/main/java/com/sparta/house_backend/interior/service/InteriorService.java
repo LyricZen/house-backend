@@ -26,10 +26,14 @@ public class InteriorService {
         return interiorResponse;
     }
 
+    @Transactional
     // 2. 선택한 인테리어 조회
     public InteriorResponse getInterior(Long interiorId) {
         Interior interior = interiorRepository.findById(interiorId)
                 .orElseThrow(IllegalArgumentException::new);
+
+        // 6. 선택한 인테리어 조회시 조회수 증가 기능
+        interior.setInteriorCount(interior.getInteriorCount() + 1);
         return new InteriorResponse(interior);
     }
 
