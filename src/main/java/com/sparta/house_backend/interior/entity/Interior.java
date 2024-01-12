@@ -9,7 +9,7 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "interior")
-@Getter @Setter
+@Getter
 @NoArgsConstructor
 public class Interior {
     @Id
@@ -21,6 +21,7 @@ public class Interior {
     private String interiorContents;
     @Column
     private String interiorImg;
+    @Setter
     @Column
     private Integer interiorCount = 0;
 
@@ -36,6 +37,5 @@ public class Interior {
         this.interiorImg = request.getInteriorImg();
         return this;
     }
-
 
 }
