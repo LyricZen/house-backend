@@ -19,8 +19,6 @@ public class InteriorController {
 
     private final InteriorService interiorService;
 
-    // 0.인테리어 전체 조회
-
     // 1. 인테리어 등록
     @PostMapping("/interior")
     public ResponseEntity<InteriorResponse> createInterior(@RequestBody InteriorCreateRequest request) {
@@ -41,6 +39,14 @@ public class InteriorController {
         InteriorResponse response = interiorService.updateInterior(interiorId, request);
         return ResponseEntity.ok(response);
     }
+
+    // 4.인테리어 전체 조회
+    @GetMapping("/interior")
+    public ResponseEntity<List<InteriorResponse>> getInteriorList() {
+        List<InteriorResponse> responseList = interiorService.getInteriorList();
+        return ResponseEntity.ok(responseList);
+    }
+
 
 
 }
