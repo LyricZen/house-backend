@@ -29,7 +29,7 @@ public class InteriorService {
     // 2. 선택한 인테리어 조회
     public InteriorResponse getInterior(Long interiorId) {
         Interior interior = interiorRepository.findById(interiorId)
-                .orElseThrow(IllegalAccessError::new);
+                .orElseThrow(IllegalArgumentException::new);
         return new InteriorResponse(interior);
     }
 
