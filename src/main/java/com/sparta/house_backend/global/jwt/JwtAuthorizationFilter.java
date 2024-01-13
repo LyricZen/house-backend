@@ -1,6 +1,6 @@
 package com.sparta.house_backend.global.jwt;
 
-import com.sparta.house_backend.domain.member.security.MemberDetailsServiceImpl;
+import com.sparta.house_backend.global.security.MemberDetailsServiceImpl;
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

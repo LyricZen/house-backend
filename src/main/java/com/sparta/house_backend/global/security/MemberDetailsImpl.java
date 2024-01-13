@@ -1,4 +1,4 @@
-package com.sparta.house_backend.domain.member.security;
+package com.sparta.house_backend.global.security;
 
 import com.sparta.house_backend.domain.member.entity.Member;
 import com.sparta.house_backend.domain.member.entity.MemberRoleEnum;

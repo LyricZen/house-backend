@@ -4,7 +4,7 @@ import com.sparta.house_backend.domain.member.entity.MemberRoleEnum;
 import com.sparta.house_backend.global.jwt.JwtAuthenticationFilter;
 import com.sparta.house_backend.global.jwt.JwtAuthorizationFilter;
 import com.sparta.house_backend.global.jwt.JwtUtil;
-import com.sparta.house_backend.domain.member.security.MemberDetailsServiceImpl;
+import com.sparta.house_backend.global.security.MemberDetailsServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;

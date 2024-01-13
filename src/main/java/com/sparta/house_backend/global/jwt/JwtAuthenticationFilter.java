@@ -3,7 +3,7 @@ package com.sparta.house_backend.global.jwt;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sparta.house_backend.domain.member.dto.LoginRequestDto;
 import com.sparta.house_backend.domain.member.entity.MemberRoleEnum;
-import com.sparta.house_backend.domain.member.security.MemberDetailsImpl;
+import com.sparta.house_backend.global.security.MemberDetailsImpl;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
