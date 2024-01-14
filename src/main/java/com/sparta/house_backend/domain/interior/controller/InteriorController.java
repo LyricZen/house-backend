@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -20,10 +21,17 @@ public class InteriorController {
 
     // 1. 인테리어 등록
     @PostMapping("/interior")
-    public ResponseEntity<InteriorResponse> createInterior(@RequestBody InteriorCreateRequest request) {
+    public ResponseEntity<InteriorResponse> createInterior(InteriorCreateRequest request) {
         InteriorResponse responseDto = interiorService.createInterior(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(responseDto);
     }
+
+    // 1.2) 인테리어 등록(사진 추가)
+//    @PostMapping("/interior")
+//    public ResponseEntity<InteriorResponse> createInterior(InteriorCreateRequest request) {
+//        InteriorResponse responseDto = interiorService.createInterior(request);
+//        return ResponseEntity.status(HttpStatus.CREATED).body(responseDto);
+//    }
 
     // 2. 선택한 인테리어 조회
     @GetMapping("/interior/{interiorId}")

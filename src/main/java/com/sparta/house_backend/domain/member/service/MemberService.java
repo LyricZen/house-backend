@@ -42,11 +42,8 @@ public class MemberService {
         String address = request.getAddress();
 
         // 사용자 역할확인 테스트를 위해 일단 admin 으로 설정 중!
+        // USER로 수정함 1월 13일
         MemberRoleEnum role = MemberRoleEnum.USER;
-        // 어드민 권한 설정은 어떻게??
-//        if (request.isRole()) {
-//            if ()
-//        }
 
         Member member = new Member(email, password, username, phoneNumber, address, role);
         memberRepository.save(member);
