@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Table(name = "interior")
@@ -15,26 +16,32 @@ public class Interior {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long interiorId;
-    @Column
+    @Column(name = "interior_title")
     private String interiorTitle;
-    @Column
+    @Column(name = "interior_contents")
     private String interiorContents;
-    @Column
+    @Column(name = "interior_img")
     private String interiorImg;
     @Setter
     @Column
     private Integer interiorCount = 0;
 
-    public Interior(InteriorCreateRequest request) {
+//    public Interior(InteriorCreateRequest request) {
+//        this.interiorTitle = request.getInteriorTitle();
+//        this.interiorContents = request.getInteriorContents();
+//        this.interiorImg = request.getInteriorImg();
+//    }
+
+    public Interior(InteriorCreateRequest request, String file) {
         this.interiorTitle = request.getInteriorTitle();
         this.interiorContents = request.getInteriorContents();
-        this.interiorImg = request.getInteriorImg();
+        this.interiorImg = file;
     }
 
-    public Interior update(InteriorUpdateRequest request) {
+    public Interior update(InteriorUpdateRequest request, String file) {
         this.interiorTitle = request.getInteriorTitle();
         this.interiorContents = request.getInteriorContents();
-        this.interiorImg = request.getInteriorImg();
+        this.interiorImg = file;
         return this;
     }
 

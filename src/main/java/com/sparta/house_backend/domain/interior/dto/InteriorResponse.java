@@ -11,11 +11,11 @@ public class InteriorResponse {
     private String interiorImg;
     private Integer interiorCount;
 
-    public InteriorResponse(Interior createInterior) {
-        this.interiorId = createInterior.getInteriorId();
-        this.interiorTitle = createInterior.getInteriorTitle();
-        this.interiorContents = createInterior.getInteriorContents();
-        this.interiorImg = createInterior.getInteriorImg();
-        this.interiorCount = createInterior.getInteriorCount();
+    public InteriorResponse(Interior interior) {
+        this.interiorId = interior.getInteriorId();
+        this.interiorTitle = interior.getInteriorTitle();
+        this.interiorContents = interior.getInteriorContents();
+        this.interiorImg = interior.getInteriorImg();
+        this.interiorCount = interior.getInteriorCount();
     }
 }

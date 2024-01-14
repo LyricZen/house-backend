@@ -25,6 +25,9 @@ dependencies {
     // AWS S3
     implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
     implementation "com.amazonaws:aws-java-sdk-s3:1.12.395"
+    //JAXB
+    implementation 'javax.xml.bind:jaxb-api:2.3.1' // 또는 현재 사용 중인 환경에 맞는 버전을 사용
+
 
     // JWT
     compileOnly group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.5'
