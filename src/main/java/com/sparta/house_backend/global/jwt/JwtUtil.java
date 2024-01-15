@@ -59,6 +59,12 @@ public class JwtUtil {
                         .compact();
     }
 
+    // JWT Header 에 저장
+//    private void addJwtToHeader(String token, HttpServletResponse res) {
+//        res.setHeader(AUTHORIZATION_HEADER, token);
+//    }
+
+
     // JWT Cookie 에 저장
     public void addJwtToCookie(String token, HttpServletResponse res) {
         try {
